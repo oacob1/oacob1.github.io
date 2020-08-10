@@ -11,7 +11,7 @@
   external: false # set true if you using external link, see bellow
 
 # Example:
-- title: github
+- title: GitHub
   url: https://github.com/oacob1
   external: true
 
