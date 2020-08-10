@@ -1,6 +1,6 @@
 ---
 title: Bo Cao Resume 2020
-permalink: /resume/
+permalink: /resume
 layout: page
 excerpt: 
 comments: false
