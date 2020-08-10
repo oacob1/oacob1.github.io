@@ -1,5 +1,5 @@
 ---
-title: Bo Cao (Pronounce as ts'ao).
+title: Bo Cao (pronounce as ts'ao)
 permalink: /about/
 layout: page
 excerpt: Hey there, I'm a not-so-bad programmer. 

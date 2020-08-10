@@ -10,7 +10,7 @@ mode: dark # default theme "dark" | "light"
 
 # Profile settings
 author:
-  name: Bo cao # author name
+  name: Bo Cao # author name
   bio: >- # tell to the world
     This site serves as an all-in-one blog out of my head, meet me at <a href="https://github.com/oacob1" target="_blank" rel="noopener">@github</a>.
   username: oacob1 # author username
