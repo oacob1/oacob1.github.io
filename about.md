@@ -1,18 +1,18 @@
 ---
-title: Colophon
+title: Bo Cao (Pronounce as ts'ao).
 permalink: /about/
 layout: page
-excerpt: Hello peeps, I'm student of computer science from Banyuwangi, living in Jogjakarta. This blog for documentation about my programming journey, running on jekyll, hosting on netlify and using my own simple theme.
+excerpt: Hey there, I'm a not-so-bad programmer. 
 comments: false
 ---
 
-He's a student from Banyuwangi, living in Jogjakarta. the blog for documentation about his programming 🎒 journey, running on jekyll, hosting on [now.sh](http://now.sh) and using his own theme, he name it <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">klisé</a>, he also loves to learning web technology; but he often forgot, that a reason why him doing the writing.
+A not-so-bad programmer, a decent husband and moving towards an awesome dad! This site serves as an all-in-one blog out of my head, running on jekyll, hosting on [Github Pages](https://pages.github.com/) and using [jekyll-klise](https://github.com/piharpi/jekyll-klise) theme. 
 
-If you have a question about him or else, just send a letter to him.
+If you want to connect with me, go check my [LinkedIn](https://www.linkedin.com/in/bo-cao/). 
 
-You can [report](http://github.com/piharpi/jekyll-klise/issues/new) if there is an broken link(s) or somethings else.
+You can [report](http://github.com/oacob1/oacob1.github.io/issues/new) if there is an broken link(s) or somethings else.
 
-##### may u needs ✨
+##### Let's connect! ✨
 
 - {{ site.author.email }}
 - github.com/{{ site.author.github }}
