@@ -38,10 +38,14 @@
 - Recommended to use multi-part uploads if larger than 100MB
 
 #### S3 Consistency
-AWS Documentation Statement
+
+<div class="overflow-table" markdown="block">
+
 | AWS Documentation Statement                                                                   | What S3 is Thinking                                                                                                                                                                                                                                                               |
 | :-------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | "S3 provides read-after write consistency for PUTs of new objects."                           | Cool, I've never seen this object, and no-one has asked about it before. Welcome aboard, new object - and you can read it immediately                                                                                                                                             |
 | "HEAD or GET requests of a key before and object exists will result in eventual consistency." | Wait a second, someone already asked about this key, and i told them, "never saw it". I remember that, and need to honor that response until I completely write this new object and fully replicate it. So, I'll let you read it eventually.                                      |
 | "S3 offers eventual consistency for overwrite PUTs and DELETEs."                              | ok, so you want to update or delete an object. Let's make sure we get that update or delete completed locally, then we can replicate it to other places. Until then, I have to serve up the current file. I'll serve up the update/delete once its fully replicated - eventually. |
 |"Updates to a single key are atomic." | Whoa, there. Only one person can update this object at a time. If I get two requests, I'll process them in order of their timestamp and you'll see the updates as soon as I replicate elsewhere. |
+
+</div>
