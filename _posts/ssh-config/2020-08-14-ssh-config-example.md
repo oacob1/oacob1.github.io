@@ -1,6 +1,8 @@
-### man ssh config
+## man ssh config
 
 create `config` under `.ssh/`
+
+### example
 
 ```bash
 Host pi1 omv pihole
@@ -11,6 +13,9 @@ Host pi2
     Hostname 192.168.1.250
     User pi
 ```
+
+
+### Documentation
 
 ```
 Host    Restricts the following declarations (up to the next Host key‐
