@@ -25,10 +25,9 @@ Host    Restricts the following declarations (up to the next Host key‐
 ```
 
 ```
- HostName   Specifies the real host name to log into.  This can be used 
-            to specify nicknames or abbreviations for hosts.  If the 
-            hostname contains the character sequence ‘%h’, then this 
-            will be replaced with the host name specified on the 
-            command line (this is useful for manipulating unqualified 
-            names).
+HostName   Specifies the real host name to log into.  This can be used to
+        specify nicknames or abbreviations for hosts.  If the hostname
+        contains the character sequence ‘%h’, then this will be replaced
+        with the host name specified on the command line (this is useful
+        for manipulating unqualified names).
 ```
