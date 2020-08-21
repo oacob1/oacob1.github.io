@@ -1,0 +1,119 @@
+I"�
+<h1 id="aws-course-notes">AWS Course Notes</h1>
+
+<!-- ![My helpful screenshot](/assets/img/avatar.png) -->
+
+<h2 id="data-stores">Data Stores</h2>
+
+<h3 id="data-persistance">Data Persistance</h3>
+<ul>
+  <li>Persistent Dat Store (Data is durable and sticks around after reboots, restarts, or power cycles)
+    <ul>
+      <li>Glacier, RDS</li>
+    </ul>
+  </li>
+  <li>Transient Data Store (Data is just temporarily stored and passed along to another process or persistent store)
+    <ul>
+      <li>SQS, SNS</li>
+    </ul>
+  </li>
+  <li>Ephemeral Data Store (Data is lost when stopped)
+    <ul>
+      <li>EC2 Instance Store</li>
+      <li>Memcached</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="iops-vs-throughput">IOPS vs. Throughput</h3>
+<ul>
+  <li>Input/Output per Second (IOPS), measure of how fast we can read and write to a device</li>
+  <li>Throughput, measure of how much data can be moved at a time</li>
+</ul>
+
+<h3 id="consistency-model---acid--base">Consistency Model - ACID &amp; BASE</h3>
+<ul>
+  <li>ACID
+    <ul>
+      <li>Atomic - Transactions are “all or nothing”</li>
+      <li>Consistent - Transactions must be valid</li>
+      <li>Isolated - Transactions can’t mess with one another</li>
+      <li>Durable - Completed transaction must stick around</li>
+    </ul>
+  </li>
+  <li>BASE
+    <ul>
+      <li>Basic Availability - values availability even if stale</li>
+      <li>Soft-state - might not be instantly consistent across stores</li>
+      <li>Eventual Consistency - will achieve consistency at some point</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="amazon-s3">Amazon S3</h3>
+<ul>
+  <li><strong>Object Store</strong>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">s3://bucket/finance/april/16/invoice_45678.pdf</code> = a <strong>KEY</strong>, not file path</li>
+    </ul>
+  </li>
+  <li>Used in other AWS services - directly and behind the scenes</li>
+  <li>Maximum object size is 5TB</li>
+  <li>Largest object in a single PUT is 5GB</li>
+  <li>Recommended to use multi-part uploads if larger than 100MB</li>
+</ul>
+
+<h4 id="s3-consistency">S3 Consistency</h4>
+
+<div class="overflow-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">AWS Documentation Statement</th>
+        <th style="text-align: left">What S3 is Thinking</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">“S3 provides read-after write consistency for PUTs of new objects.”</td>
+        <td style="text-align: left">Cool, I’ve never seen this object, and no-one has asked about it before. Welcome aboard, new object - and you can read it immediately</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">“HEAD or GET requests of a key before and object exists will result in eventual consistency.”</td>
+        <td style="text-align: left">Wait a second, someone already asked about this key, and i told them, “never saw it”. I remember that, and need to honor that response until I completely write this new object and fully replicate it. So, I’ll let you read it eventually.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">“S3 offers eventual consistency for overwrite PUTs and DELETEs.”</td>
+        <td style="text-align: left">ok, so you want to update or delete an object. Let’s make sure we get that update or delete completed locally, then we can replicate it to other places. Until then, I have to serve up the current file. I’ll serve up the update/delete once its fully replicated - eventually.</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">“Updates to a single key are atomic.”</td>
+        <td style="text-align: left">Whoa, there. Only one person can update this object at a time. If I get two requests, I’ll process them in order of their timestamp and you’ll see the updates as soon as I replicate elsewhere.</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h3 id="iam">IAM</h3>
+<ul>
+  <li>By default, any new IAM user you create in an AWS account has no permission
+policies attached</li>
+  <li>All permissions polices have an ‘Implicity Deny’ - no ALLOW = Implicit Deny</li>
+  <li>DENY always overrides any ALLOW</li>
+  <li>IAM porivides identity services - but also coordinates with STS to allow
+Identity Federation (the user of external identities), to access AWS resources</li>
+</ul>
+
+<h3 id="best-practice-for-iam"><strong>BEST practice</strong> for IAM</h3>
+<ul>
+  <li>Delete your root access keys</li>
+  <li>Activate MFA on your root account</li>
+  <li>Create and use an IAM user with Admin privileges instead of the Root Account</li>
+  <li>Create individual IAM users</li>
+  <li>Use groups to assign permissions
+= Follow the “principle of least privilege”</li>
+  <li>Apply and IAM password policy</li>
+</ul>
+:ET

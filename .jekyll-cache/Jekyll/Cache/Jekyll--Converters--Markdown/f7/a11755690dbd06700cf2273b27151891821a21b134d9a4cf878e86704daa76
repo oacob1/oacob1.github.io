@@ -1,0 +1,30 @@
+I"R<h2 id="man-ssh-config">man ssh config</h2>
+
+<p>create <code class="language-plaintext highlighter-rouge">config</code> under <code class="language-plaintext highlighter-rouge">.ssh/</code></p>
+
+<h3 id="example">example</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Host pi1 omv pihole
+    Hostname 192.168.1.95
+    User pi
+
+Host pi2
+    Hostname 192.168.1.250
+    User pi
+</code></pre></div></div>
+
+<h3 id="documentation">Documentation</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Host    Restricts the following declarations (up to the next Host key‐
+        word) to be only for those hosts that match one of the patterns
+        given after the keyword.  If more than one pattern is provided,
+        they should be separated by whitespace.
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HostName   Specifies the real host name to log into.  This can be used to
+        specify nicknames or abbreviations for hosts.  If the hostname
+        contains the character sequence ‘%h’, then this will be replaced
+        with the host name specified on the command line (this is useful
+        for manipulating unqualified names).
+</code></pre></div></div>
+:ET

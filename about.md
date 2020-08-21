@@ -1,19 +1,29 @@
 ---
-title: Bo Cao (pronounce as ts'ao)
-permalink: /about/
 layout: page
-excerpt: Hey there, I'm a not-so-bad programmer. 
-comments: false
+title: About
 ---
 
-A not-so-bad programmer, a decent husband and moving towards an awesome dad! This site serves as an all-in-one blog out of my head, running on jekyll, hosting on [Github Pages](https://pages.github.com/) and using [jekyll-klise](https://github.com/piharpi/jekyll-klise) theme. 
+<p class="message">
+  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+</p>
 
-If you want to connect with me, go check my [LinkedIn](https://www.linkedin.com/in/bo-cao/). 
+In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
 
-You can [report](http://github.com/oacob1/oacob1.github.io/issues/new) if there is an broken link(s) or somethings else.
+There are currently two themes built on Poole:
 
+* [Hyde](http://hyde.getpoole.com)
+* [Lanyon](http://lanyon.getpoole.com)
 
-##### Let's connect! ✨
+Learn more and contribute on [GitHub](https://github.com/poole).
 
-- {{ site.author.email }}
-- github.com/{{ site.author.github }}
+## Setup
+
+Some fun facts about the setup of this project include:
+
+* Built for [Jekyll](https://jekyllrb.com)
+* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
+* Coded with [Atom](https://atom.io)
+
+Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+
+Thanks for reading!

@@ -1,82 +1,22 @@
-# Site settings
-title: Feline Unleashed # site title
-description: >- # site description
-  Jog down stuff, meet him <a href="https://github.com/oacob1" target="_blank" rel="noopener">@github</a>.
-lang: en-US # default lang
-timezone: America/New_York # set your timezone
-image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
-repo: https://github.com/oacob1/oacob1.github.io # site repo [optional]
-mode:  dark # default theme "dark" | "light"
+# Setup
+title:               Lanyon
+tagline:             'A Jekyll theme'
+description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:                 http://lanyon.getpoole.com
+baseurl:             ''
+paginate:            5
+permalink:           pretty
 
-# Profile settings
+# About/contact
 author:
-  name: Bo Cao # author name
-  bio: >- # tell to the world
-    This site serves as an all-in-one blog out of my head, meet me at <a href="https://github.com/oacob1" target="_blank" rel="noopener">@github</a>.
-  username: oacob1 # author username
-  github: oacob1
-  twitter: oacob1
-  facebook: Bo Cao
-  email: oacob1l@gmail.com # your contact address
-  avatar: /assets/img/avatar.png # change with your own avatar
+  name:              Mark Otto
+  url:               https://twitter.com/mdo
+  email:             markdotto@gmail.com
 
-# Url settings
-url: "https://oacob1.xyz"
-baseurl:
-permalink: /:title/
-google_analytics:
-fb_appid:
-
-# Collection setting
-collections:
-  posts:
-    output: true
-
-# Markdown settings
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  syntax_highlighter: rouge
-
-# Default front matter
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: post
-      comments: false
-
-# Jekyll Compose default front matter
-jekyll_compose:
-  post_default_front_matter:
-    modified:
-    tags: []
-    description:
-  draft_default_front_matter:
-    modified:
-    tags: []
-    description:
-
-# Build settings
-sass:
-  style: compressed
-
-include:
-  - _redirects
-  - .htaccess
-
-exclude:
-  - CNAME
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - CHANGELOG.md
-  - README.md
-  - node_modules
-  - CODE_OF_CONDUCT.md
-
-# Plugins
+# Gems
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-postfiles
+  - jekyll-paginate
+
+# Custom vars
+version:             1.1.0
+google_analytics_id: #UA-XXXX-Y
