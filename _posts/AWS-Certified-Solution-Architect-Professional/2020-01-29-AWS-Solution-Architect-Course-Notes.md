@@ -49,3 +49,20 @@
 |"Updates to a single key are atomic." | Whoa, there. Only one person can update this object at a time. If I get two requests, I'll process them in order of their timestamp and you'll see the updates as soon as I replicate elsewhere. |
 
 </div>
+
+### IAM
+- By default, any new IAM user you create in an AWS account has no permission
+  policies attached
+- All permissions polices have an 'Implicity Deny' - no ALLOW = Implicit Deny
+- DENY always overrides any ALLOW
+- IAM porivides identity services - but also coordinates with STS to allow
+  Identity Federation (the user of external identities), to access AWS resources
+
+### **BEST practice** for IAM
+- Delete your root access keys
+- Activate MFA on your root account
+- Create and use an IAM user with Admin privileges instead of the Root Account
+- Create individual IAM users
+- Use groups to assign permissions
+= Follow the "principle of least privilege"
+- Apply and IAM password policy
